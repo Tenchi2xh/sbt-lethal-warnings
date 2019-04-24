@@ -9,14 +9,14 @@ Selectively escalate warnings to errors: `-Xfatal-warnings` with a whitelist.
 Add the following to the `project/plugin.sbt`:
 
 ```scala
-addSbtPlugin("net.team2xh" % "sbt-lethal-warnings" % "0.1.0")
+addSbtPlugin("net.team2xh" % "sbt-lethal-warnings" % "[Version in badge above]")
 ```
 
 In `build.sbt`, configure which warnings need to be escalated to errors:
 
 ```scala
 import sbt.LethalWarnings._
-lethalWarnings := Seq(<DesiredWarnings>)
+lethalWarnings := Seq(/* Desired warnings */)
 ```
 
 ## Available warnings
