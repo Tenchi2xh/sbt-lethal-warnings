@@ -1,6 +1,6 @@
 # sbt-lethal-warnings
 
-[![](https://maven-badges.herokuapp.com/maven-central/net.team2xh/sbt-lethal-warnings_2.12_1.0/badge.svg)](https://maven-badges.herokuapp.com/maven-central/net.team2xh/sbt-lethal-warnings_2.12_1.0)
+[![](https://maven-badges.herokuapp.com/maven-central/net.team2xh/sbt-lethal-warnings/badge.svg)](https://maven-badges.herokuapp.com/maven-central/net.team2xh/sbt-lethal-warnings)
 
 Selectively escalate warnings to errors: `-Xfatal-warnings` with a whitelist.
 
