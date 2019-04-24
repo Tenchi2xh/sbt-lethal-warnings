@@ -11,6 +11,7 @@ lazy val root = (project in file("."))
     scalaVersion := "2.12.8",
   )
   .settings(publishingSettings)
+  .settings(scriptedTestsSettings)
 
 lazy val publishingSettings = Seq(
   useGpg := true,
@@ -36,4 +37,9 @@ lazy val publishingSettings = Seq(
     releaseStepCommandAndRemaining("+sonatypeRelease"),
     pushChanges,
   ),
+)
+
+lazy val scriptedTestsSettings = Seq(
+  scriptedLaunchOpts ++= Seq("-Xmx1024M", "-Dplugin.version=" + version.value),
+  scriptedBufferLog := false,
 )
