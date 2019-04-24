@@ -1,0 +1,45 @@
+version: 2.1
+jobs:
+  build:
+    working_directory: ~/lethal-warnings
+    docker:
+      - image: circleci/openjdk:8
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - lethal-warnings-cache-{{ checksum "build.sbt" }}
+            - lethal-warnings-cache-v1
+
+      - run:
+          name: Compile project
+          command:
+            sbt compile exit
+
+      - run:
+          name: Run unit tests
+          command:
+            sbt test exit
+
+      - run:
+          name: Run SBT scripted tests
+          command:
+            sbt scripted exit
+
+      - save_cache:
+          key: lethal-warnings-cache-{{ checksum "build.sbt" }}
+          paths:
+            - target/streams
+            - project/target/streams
+            - ~/.sbt
+            - ~/.ivy2/cache
+
+      - save_cache:
+          key: lethal-warnings-cache-v1
+          paths:
+            - ~/.sbt
+            - ~/.ivy2/cache
+
+      # - store_test_results:
+      #     path: target/test-reports
