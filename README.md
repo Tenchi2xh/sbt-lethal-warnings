@@ -1,6 +1,6 @@
 # sbt-lethal-warnings
 
-[![](https://maven-badges.herokuapp.com/maven-central/net.team2xh/sbt-lethal-warnings/badge.svg)](https://maven-badges.herokuapp.com/maven-central/net.team2xh/sbt-lethal-warnings)
+[![](https://maven-badges.herokuapp.com/maven-central/net.team2xh/sbt-lethal-warnings/badge.svg)](https://maven-badges.herokuapp.com/maven-central/net.team2xh/sbt-lethal-warnings) [![CircleCI branch](https://img.shields.io/circleci/project/github/Tenchi2xh/sbt-lethal-warnings/master.svg)](https://circleci.com/gh/Tenchi2xh/sbt-lethal-warnings)
 
 Selectively escalate warnings to errors: `-Xfatal-warnings` with a whitelist.
 
