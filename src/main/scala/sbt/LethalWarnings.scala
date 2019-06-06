@@ -10,6 +10,7 @@ object LethalWarnings {
 
   case object NonExhaustivePatternMatch extends LethalWarning("^match may not be exhaustive.*$")
   case object UniversalEquality extends LethalWarning("^comparing values of types \\S+ and \\S+ using \\S+ will always yield false")
+  case object MatchOnErased extends LethalWarning("^abstract type pattern \\S+ is unchecked since it is eliminated by erasure")
 
   val allWarnings = {
     import scala.reflect.runtime._

@@ -10,4 +10,16 @@ object FullOfWarnings {
     }
   }
   val testUniversalEquality: Boolean = Some("foo") == "foo"
+
+  val testMatchOnErased = {
+    trait TraitWithDependantType {
+      type T
+    }
+
+    val test: TraitWithDependantType = null
+
+    test match {
+      case subject: test.T => ???
+    }
+  }
 }
