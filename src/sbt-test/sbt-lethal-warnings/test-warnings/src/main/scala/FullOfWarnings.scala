@@ -22,4 +22,15 @@ object FullOfWarnings {
       case subject: test.T => ???
     }
   }
+
+  val referenceToUninitialized = {
+    object Test {
+      case class A(i: Int)
+
+      def f(implicit a: A): Int = a.i
+
+      val i = f
+      implicit val a: A = A(5)
+    }
+  }
 }

@@ -26,6 +26,7 @@ Key                         | Matching warning
 `NonExhaustivePatternMatch` | Missing cases in pattern match blocks
 `UniversalEquality`         | Comparing objects of different types
 `MatchOnErased`             | Type erasure in pattern matches
+`ReferenceToUninitialized`  | Reference to uninitialized value
 
 To lethalize all warnings supported by the plugin, use the following setting:
 
